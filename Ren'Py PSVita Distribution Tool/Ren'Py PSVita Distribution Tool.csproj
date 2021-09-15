@@ -10,8 +10,9 @@
     <Company>CBPS</Company>
     <PackageIcon>renpy-icon-5rhktb5lrepss74m-c.png</PackageIcon>
     <PackageIconUrl />
-    <ApplicationIcon />
+    <ApplicationIcon>renpy-icon-5rhktb5lrepss74m-c.ico</ApplicationIcon>
     <StartupObject />
+    <Win32Resource />
   </PropertyGroup>
 
   <ItemGroup>
