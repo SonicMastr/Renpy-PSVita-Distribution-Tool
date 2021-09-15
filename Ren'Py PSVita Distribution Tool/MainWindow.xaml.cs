@@ -152,7 +152,7 @@ namespace Ren_Py_PSVita_Distribution_Tool
         private void build_click(object sender, RoutedEventArgs e)
         {
             string distDirectory = "dists\\" + gameName.SelectedItem.ToString();
-            string distFileName = distDirectory + "\\" + appname + "-" + appver + ".zip";
+            string distFileName = distDirectory + "\\" + appname + "-" + appver + ".vpk";
             ProcessStartInfo infoPNG = new ProcessStartInfo();
             infoPNG.WorkingDirectory = Directory.GetCurrentDirectory();
             infoPNG.FileName = "pngquant.exe";
