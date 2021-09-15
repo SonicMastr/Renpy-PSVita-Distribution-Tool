@@ -1,0 +1,38 @@
+﻿<Window x:Name="Ren_Py_Vita_Distribution_Tool" x:Class="Ren_Py_PSVita_Distribution_Tool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ren_Py_PSVita_Distribution_Tool"
+        mc:Ignorable="d"
+        Title="Ren'Py PSVita Distribution Tool" Height="560" Width="960" ResizeMode="NoResize" Icon="/renpy-icon-5rhktb5lrepss74m-c.png">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF00B9FF"/>
+            <GradientStop Color="#FFC5DFFF" Offset="0.222"/>
+            <GradientStop Color="#FFDEEDFF" Offset="1"/>
+            <GradientStop Color="#FFA4CEFF" Offset="0.004"/>
+            <GradientStop Color="#FFD3E7FF" Offset="0.624"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="143*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="background" HorizontalAlignment="Left" Height="342" VerticalAlignment="Top" Width="617" Visibility="Visible" Margin="70,29,0,0" OpacityMask="Black" Grid.Column="1"/>
+        <ListBox x:Name="gameName" Margin="29,87,645,132" SelectionChanged="gameName_SelectionChanged" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF084B83" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2" />
+        <Button x:Name="build_button" Content="Build VPK" HorizontalAlignment="Left" Margin="565,467,0,0" VerticalAlignment="Top" Height="40" Width="101" FontSize="18" FontWeight="Bold" IsEnabled="False" Click="build_click" Grid.Column="1"/>
+        <TextBlock x:Name="error" HorizontalAlignment="Left" Margin="172,452,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="616" TextAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="Red" Visibility="Hidden" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="no_preview" HorizontalAlignment="Left" Margin="273,179,0,0" Text="Select a Project" TextWrapping="Wrap" VerticalAlignment="Top" Height="34" Width="202" FontSize="24" FontWeight="Bold" Visibility="Visible" TextAlignment="Center" Grid.Column="1"/>
+        <TextBox x:Name="TextBox_TID" HorizontalAlignment="Left" Margin="546,407,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120" MaxLength="9" ToolTip="CAPITAL letters and numbers only (eg RNPY12345)" TextAlignment="Right" MaxLines="1" TextChanged="UpdateStatus" Grid.Column="1"/>
+        <Label x:Name="Label_TID" Content="Title ID:" HorizontalAlignment="Left" Margin="486,403,0,0" VerticalAlignment="Top" Height="26" Width="57" FontWeight="Bold" Grid.Column="1"/>
+        <TextBox x:Name="TextBox_VER" HorizontalAlignment="Left" Margin="548,433,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="118" MaxLength="5" ToolTip="Has to be XX.YY format (eg. 02.34)" TextAlignment="Right" TextChanged="UpdateStatus" Grid.Column="1"/>
+        <Label x:Name="Label_VER" Content="App Version:" HorizontalAlignment="Left" Margin="459,429,0,0" VerticalAlignment="Top" Height="26" Width="84" FontWeight="Bold" Grid.Column="1"/>
+        <TextBox x:Name="TextBox_NAME" HorizontalAlignment="Left" Margin="475,381,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="191" TextAlignment="Right" MaxLines="1" TextChanged="UpdateStatus" Grid.Column="1"/>
+        <Label x:Name="Label_NAME" Content="Application Name:" HorizontalAlignment="Left" Margin="359,377,0,0" VerticalAlignment="Top" Height="26" Width="116" FontWeight="Bold" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="75,29,0,0" Text="PROJECTS:" TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="189" Foreground="#FF084B83" FontWeight="Bold" FontSize="36" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="status" HorizontalAlignment="Left" Margin="172,452,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="616" TextAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="Black" Visibility="Hidden" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="Success" HorizontalAlignment="Left" Margin="172,452,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="616" TextAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="#FF00FF0C" Visibility="Hidden" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>

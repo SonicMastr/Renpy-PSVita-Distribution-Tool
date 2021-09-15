@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>Ren_Py_PSVita_Distribution_Tool</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Authors>Jaylon Gowie</Authors>
+    <Company>CBPS</Company>
+    <PackageIcon>renpy-icon-5rhktb5lrepss74m-c.png</PackageIcon>
+    <PackageIconUrl />
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="renpy-icon-5rhktb5lrepss74m-c.png" />
+    <None Include="..\..\..\..\Downloads\renpy-icon-5rhktb5lrepss74m-c.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="renpy-icon-5rhktb5lrepss74m-c.png" />
+  </ItemGroup>
+
+</Project>
